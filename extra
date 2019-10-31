@@ -1,0 +1,51 @@
+<div class="menu_bar">
+        <span style="background-color: rgb(102, 35, 255); color: aliceblue" class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                DASHBOARD
+            </span>
+        </span>
+        <span class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                WIDGETS
+            </span>
+        </span>
+        <span class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                UI ELEMENTS
+            </span>
+        </span>
+        <span class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                PAGES
+            </span>
+        </span>
+        <span class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                FORMS
+            </span>
+        </span>
+        <span class="menu">
+            <span class="menu_icon_span">
+                <img src="monitor.svg" class="menu_icon" />
+            </span>
+            <span class="menu_text">
+                APPS
+            </span>
+        </span>
+
+    </div>
