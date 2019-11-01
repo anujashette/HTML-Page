@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'areaspline'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'top',
+                    x: 150,
+                    y: 100,
+                    floating: true,
+                    borderWidth: 1,
+                    backgroundColor:
+                        Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+                },
+                xAxis: {
+                    categories: [
+
+                    ],
+                    plotBands: [{ // visualize the weekend
+                        from: 4.5,
+                        to: 6.5,
+                        color: '#ffffff'
+                    }]
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    }
+                },
+                tooltip: {
+                    shared: true,
+                    valueSuffix: ' units'
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    areaspline: {
+                        fillOpacity: 0.5
+                    }
+                },
+                series: [{
+                    name: 'John',
+                    data: [5,12,8,12,16,10,16]
+                }, {
+                    name: 'Jane',
+                    data: [1,5,3,6,9,7,10]
+                }]
+            });
+            chart.render();
+        }
+    </script>
+    <script src="highcharts.js"></script>
+    <script src="exporting.js"></script>
+    <script src="export-data.js"></script>
+
+</head>
+
+<body>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</body>
+
+</html>

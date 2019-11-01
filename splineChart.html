@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title: {
+			text: "Customized Multi Series Range Spline Area Chart",
+			fontColor: "Grey"
+		},
+		exportEnabled: true,
+		axisX: {
+			interval: 10,
+			titleFontSize: 14,
+			titleFontColor: "black",
+			title: "Click on legend to show / hide the chart"
+		},
+		legend: {
+			cursor: "pointer",
+			itemclick: function (e) {
+				if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+					e.dataSeries.visible = false;
+				} else {
+					e.dataSeries.visible = true;
+				}
+			chart.render();
+			}
+		},
+		data: [
+		{
+			type: "rangeSplineArea",
+			color: "#B36491",
+			showInLegend: true,
+			legendText: "Range Spline 1",          			
+			fillOpacity: .1,
+			lineThickness: 2,
+			dataPoints: [
+				{ x: 10, y: [8.86, 50.76] },
+				{ x: 20, y: [5.95, 38.26] },
+				{ x: 30, y: [28.27, 52.90] },
+				{ x: 40, y: [57.65, 78.65] },
+				{ x: 50, y: [15.50, 31.26] }
+			]
+		},
+		{
+			type: "rangeSplineArea",
+			color: "#6DCFF6",
+			showInLegend: true,
+			legendText: "Range Spline 2",			
+			fillOpacity: .3,
+			dataPoints: [
+				{ x: 10, y: [18.86, 55.76] },
+				{ x: 20, y: [55.95, 98.26] },
+				{ x: 30, y: [48.27, 72.90] },
+				{ x: 40, y: [67.65, 86.65] },
+				{ x: 50, y: [25.50, 71.26] }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;">
+</div>
+</body>
+</html>

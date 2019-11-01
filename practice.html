@@ -5,6 +5,70 @@
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
 
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = Highcharts.chart('container', {
+                chart: {
+                    type: 'areaspline',
+                    height:'200',
+                    width:'340'
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    enabled:false,
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'top',
+                    x: 150,
+                    y: 100,
+                    floating: true,
+                    borderWidth: 1,
+                    backgroundColor:
+                        Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+                },
+                xAxis: {
+                    categories: [
+
+                    ],
+                    plotBands: [{ // visualize the weekend
+                        from: 4.5,
+                        to: 6.5,
+                        color: '#ffffff'
+                    }]
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    }
+                },
+                tooltip: {
+                    shared: true,
+                    valueSuffix: ' units'
+                },
+                credits: {
+                    enabled: false
+                },
+                plotOptions: {
+                    areaspline: {
+                        fillOpacity: 0.5
+                    }
+                },
+                series: [{
+                    name: 'John',
+                    data: [5,12,8,12,16,10,16],
+                }, {
+                    name: 'Jane',
+                    data: [2,5,3,6,9,7,10],
+                }]
+            });
+            chart.render();
+        }
+    </script>
+    <script src="highcharts.js"></script>
+    <script src="exporting.js"></script>
+    <script src="export-data.js"></script>
 </head>
 
 <body>
@@ -42,7 +106,7 @@
         </div>
         <!-- HEADER SAECTION -->
         <div class="menu_bar">
-            <span style="background-color: #402ebf; color: aliceblue" class="menu">
+            <span style="background-color: #4438e4; color: aliceblue" class="menu">
                 <span class="menu_icon_span">
                     <img src="monitor.png" class="menu_icon" />
                 </span>
@@ -206,25 +270,43 @@
                     </div>
                 </div>
             </div>
-            <div class="box_span_graph" >
+            <div class="box_span_graph">
                 <div class="profile_div" align="left">
-                <div >
-                    <p class="product">Top Products</p>
-                    <p class="product_price">598&#8218;468</p>
-                    <p class="product_rate">6.5 change from today</p>
+                    <div>
+                        <p class="product">Top Products</p>
+                        <p class="product_price">598&#8218;468</p>
+                        <p class="product_rate">6.5% change from today</p>
+                    </div>
+                    <div>
+                        <hr class="line_hr">
+                    </div>
+                    <div>
+                        <p class="product"> Support Cases</p>
+                        <p class="product_price">612&#8218;468</p>
+                        <p class="product_rate">2.5% change from today</p>
+                    </div>
+                    <div id="container" style="min-width: 0px; height: 165px; margin: 42px auto"></div>
                 </div>
-                <div>    
-                    <hr class="line_hr">
-                </div>
-                <div>    
-                    <p>Top Products</p>
-                    <p>598&#8218;468</p>
-                    <p>6.5 change from today</p>
-                </div>   
-            </div> 
             </div>
             <div class="box_span_graph">
-                sadas
+                <div class="graph_div">
+                    <div>
+                        <p class="graph_sales">
+                            4564
+                        </p>
+                        <p class="graph_sales_title">
+                            Total Sales
+                        </p>
+                    </div>
+                    <div>
+                        <p class="graph_sales">
+                            6734
+                        </p>
+                        <p class="graph_sales_title">
+                            Open Campaign
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -360,15 +442,236 @@
     <div align="center">
         <div class="sub_div_two">
             <div class="box_span_chart">
-                anuja
+                <div align="left" class="chart_title">
+                    <p class="footer_title">
+                        The Current Chart
+                    </p>
+                </div>
+                <div class="chart_main">
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_1"></div>
+                        </div>
+                        <p class="days">Mon</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_2"></div>
+                        </div>
+                        <p class="days">Tue</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_3"></div>
+                        </div>
+                        <p class="days">Wed</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_4"></div>
+                        </div>
+                        <p class="days">Thu</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_5"></div>
+                        </div>
+                        <p class="days">Fri</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_6"></div>
+                        </div>
+                        <p class="days">Sat</p>
+                    </div>
+                    <div class="container">
+                        <div class="container_1">
+                            <div class="inner_container_7"></div>
+                        </div>
+                        <p class="days">Sun</p>
+                    </div>
+                </div>
+                <div align="left" class="project_status">
+                    <p class="product">
+                        Project Status
+                    </p>
+                    <p class="product_price">
+                        76&#8218;533 <span class="pcs">PCS</span>
+                    </p>
+                </div>
             </div>
             <div class="box_span_chart">
-                nauj
+                <div align="left" class="chart_title">
+                    <p class="footer_title">
+                        Updates
+                    </p>
+                    <div class="circle_div">
+                        <div>
+                            <img src="circle.png" class="circle" />
+                            <div class="container_line_1">
+                            </div>
+                        </div>
+                        <div class="chart_description">
+                            <p class="chart_p1">
+                                User Confirmation
+                            </p>
+                            <p class="chart_p2">
+                                Donec rutrum congue leo eget malesuada.
+                            </p>
+                            <div class="watch_main">
+                                <div>
+                                    <img src="watch.png" class="watch_icon">
+                                </div>
+                                <p class="chart_p3">7 months ago.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circle_bottom_div">
+                        <div>
+                            <div class="container_line_2">
+                            </div>
+                            <img src="circle.png" />
+                            <div class="container_line_1">
+                            </div>
+                        </div>
+                        <div class="chart_description">
+                            <p class="chart_p1">
+                                User Confirmation
+                            </p>
+                            <p class="chart_p2">
+                                Donec rutrum congue leo eget malesuada.
+                            </p>
+                            <div class="watch_main">
+                                <div>
+                                    <img src="watch.png" class="watch_icon">
+                                </div>
+                                <p class="chart_p3">7 months ago.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="circle_bottom_div">
+                        <div>
+                            <div class="container_line_2">
+                            </div>
+                            <img src="circle.png" />
+                            <div class="container_line_1">
+                            </div>
+                        </div>
+                        <div class="chart_description">
+                            <p class="chart_p1">
+                                User Confirmation
+                            </p>
+                            <p class="chart_p2">
+                                Donec rutrum congue leo eget malesuada.
+                            </p>
+                            <div class="watch_main">
+                                <div>
+                                    <img src="watch.png" class="watch_icon">
+                                </div>
+                                <p class="chart_p3">7 months ago.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- FOOTER SECTION -->
+
+    <div align="center">
+        <div class="sub_div_footer">
+            <div class="box_span_footer" align="left">
+                <div>
+                    <p class="footer_title">
+                        Manage Tickets
+                    </p>
+                </div>
+                <div class="first_div">
+                    <div class="left_div">
+                        <img src="profile.jpg" class="footer_profile" />
+                    </div>
+                    <div class="middle_div">
+                        <p class="product">
+                            <span class="james_span"> James:</span> <span class="james_span_1"> [#23451] Start with a
+                                simple basic web page.</span>
+                        </p>
+                        <p class="description">
+                            Specifies that a element should render in one solid color (noshaded), instead of a shaded
+                            color.
+                        </p>
+                        <div class="last_footer_div">
+                            <span class="respond_span">
+                                Last responded: 3 hours ago
+                            </span>
+                            <span class="due_span">
+                                Due in: 2 days
+                            </span>
+                        </div>
+                    </div>
+                    <div class="right_div" align="right">
+                        <input class="follow_button" type="button" value="Manage" />
+                    </div>
+                </div>
+                <hr>
+                <div class="first_div">
+                    <div class="left_div">
+                        <img src="profile.jpg" class="footer_profile" />
+                    </div>
+                    <div class="middle_div">
+                        <p class="product">
+                            <span class="james_span"> James:</span> <span class="james_span_1"> [#23451] Start with a
+                                simple basic web page.</span>
+                        </p>
+                        <p class="description">
+                            Specifies that a element should render in one solid color (noshaded), instead of a shaded
+                            color.
+                        </p>
+                        <div class="last_footer_div">
+                            <span class="respond_span">
+                                Last responded: 3 hours ago
+                            </span>
+                            <span class="due_span">
+                                Due in: 2 days
+                            </span>
+                        </div>
+                    </div>
+                    <div class="right_div" align="right">
+                        <input class="follow_button" type="button" value="Manage" />
+                    </div>
+                </div>
+                <hr>
+                <div class="first_div">
+                    <div class="left_div">
+                        <img src="profile.jpg" class="footer_profile" />
+                    </div>
+                    <div class="middle_div">
+                        <p class="product">
+                            <span class="james_span"> James:</span> <span class="james_span_1"> [#23451] Start with a
+                                simple basic web page.</span>
+                        </p>
+                        <p class="description">
+                            Specifies that a element should render in one solid color (noshaded), instead of a shaded
+                            color.
+                        </p>
+                        <div class="last_footer_div">
+                            <span class="respond_span">
+                                Last responded: 3 hours ago
+                            </span>
+                            <span class="due_span">
+                                Due in: 2 days
+                            </span>
+                        </div>
+                    </div>
+                    <div class="right_div" align="right">
+                        <input class="follow_button" type="button" value="Manage" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
