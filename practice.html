@@ -2,73 +2,14 @@
 
 <head>
     <title> Liberty UI</title>
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
 
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript">
-        window.onload = function () {
-            var chart = Highcharts.chart('container', {
-                chart: {
-                    type: 'areaspline',
-                    height:'200',
-                    width:'340'
-                },
-                title: {
-                    text: ''
-                },
-                legend: {
-                    enabled:false,
-                    layout: 'vertical',
-                    align: 'left',
-                    verticalAlign: 'top',
-                    x: 150,
-                    y: 100,
-                    floating: true,
-                    borderWidth: 1,
-                    backgroundColor:
-                        Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-                },
-                xAxis: {
-                    categories: [
 
-                    ],
-                    plotBands: [{ // visualize the weekend
-                        from: 4.5,
-                        to: 6.5,
-                        color: '#ffffff'
-                    }]
-                },
-                yAxis: {
-                    title: {
-                        text: ''
-                    }
-                },
-                tooltip: {
-                    shared: true,
-                    valueSuffix: ' units'
-                },
-                credits: {
-                    enabled: false
-                },
-                plotOptions: {
-                    areaspline: {
-                        fillOpacity: 0.5
-                    }
-                },
-                series: [{
-                    name: 'John',
-                    data: [5,12,8,12,16,10,16],
-                }, {
-                    name: 'Jane',
-                    data: [2,5,3,6,9,7,10],
-                }]
-            });
-            chart.render();
-        }
-    </script>
-    <script src="highcharts.js"></script>
-    <script src="exporting.js"></script>
-    <script src="export-data.js"></script>
+    <script src="spline_chart.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
 </head>
 
 <body>
@@ -285,11 +226,31 @@
                         <p class="product_price">612&#8218;468</p>
                         <p class="product_rate">2.5% change from today</p>
                     </div>
-                    <div id="container" style="min-width: 0px; height: 165px; margin: 42px auto"></div>
+                    <div id="container_spline" class="spline_div">
+                    </div>
                 </div>
             </div>
             <div class="box_span_graph">
                 <div class="graph_div">
+                    <div>
+                        <p class="graph_sales">
+                            4564
+                        </p>
+                        <p class="graph_sales_title">
+                            Total Sales
+                        </p>
+                    </div>
+                    <div>
+                        <p class="graph_sales">
+                            6734
+                        </p>
+                        <p class="graph_sales_title">
+                            Open Campaign
+                        </p>
+                    </div>
+                </div>
+                <div id="container" class="line_div"></div>
+                <div class="graph_div_two">
                     <div>
                         <p class="graph_sales">
                             4564
