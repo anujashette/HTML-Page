@@ -10,6 +10,9 @@ body{
     background-color: #ffffff; 
     height: 145px; 
     box-shadow: 0 0 13px rgba(0,0,0,0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub_div{
@@ -140,6 +143,11 @@ body{
 }
 
 /* FIRST SECTION */
+
+#flex_section{
+    display: flex;
+    justify-content: center;
+}
 .sub_div_two{
     width: 90%; 
     padding: 2% 0 0 0; 
@@ -149,7 +157,7 @@ body{
 
 .sub_div_border{
     width: 100%;
-    height: 110px;
+    /* height: 110px; */
     border: 1px solid #dadada;
     display: flex;
 }
@@ -186,14 +194,15 @@ body{
 
  .people_title{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 1em;
     color: #383838;
  }
  .people_count{
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 2.2em;
     color: #383838;
  }
+
 /* GRAPH SECTION */
 
  .sub_div_graph{
@@ -204,12 +213,18 @@ body{
 
 .box_span_graph{
     width: 31.5%;
-    height: 450px;
+    /* height: 450px; */
     border: 1px solid #dadada;
     background: #ffffff;
 }
 
 .profile_div{
+    padding: 35px 25px 0 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile_div_product{
     padding: 35px 25px 0 25px;
 }
 .graph_profile{
@@ -222,6 +237,8 @@ body{
     font-size: 1.3em;
     font-family: sans-serif;
     color: #545454;
+    display: flex;
+    justify-content: center;
 }
 
 .developer_p{
@@ -229,6 +246,8 @@ body{
     font-size: 1em;
     font-family: sans-serif;
     color: #888888;
+    display: flex;
+    justify-content: center;
 }
 
 .para_div{
@@ -240,8 +259,15 @@ body{
     font-family: sans-serif;
     font-size: 1em;
     color: #484848;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
-
+.follow_div{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 30px;
+}
 .follow_button{
     background-color: #4438e4;
     border: none;
@@ -262,6 +288,8 @@ body{
 .graph_footer{
     display: flex;
     justify-content: space-around;
+    border-top: 1px solid #aca8a8;
+    padding : 30px 0 0;
 }
 
 .post_count{
@@ -298,6 +326,14 @@ body{
     font-family: sans-serif;
     color: #5c5b6d;
 }
+.product_top_div{
+    padding:  0 0 25px;
+}
+
+.product_bottom_div{
+    border-top: 1px solid #aca8a8;
+    padding: 25px 0 0;
+}
 
 .graph_div{
     display: flex;
@@ -307,17 +343,19 @@ body{
 
 .graph_sales{
     margin: 0;
-    font-size: 20px;
+    font-size: 1.2em;
     font-family: sans-serif;
     color: #393a5a;
     padding: 0 0 5px 0px;
+    text-align: center;
 }
 
 .graph_sales_title{
     margin: 0;
-    font-size: 12px;
+    font-size: 0.8em;
     font-family: sans-serif;
     color: #9a9a92;
+    text-align: center;
 }
 
 .spline_div{
@@ -329,6 +367,8 @@ body{
 
 .line_div{
     padding: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .graph_div_two{
@@ -417,7 +457,7 @@ table {
 
 .box_span_chart{
     width: 48.5%;
-    height: 410px;
+    /* height: 410px; */
     border: 1px solid #dadada;
     background: #ffffff;
 }
@@ -556,7 +596,7 @@ table {
 
   .chart_p2{
     margin: 0;
-    font-size: 15px;
+    font-size: 1em;
     font-family: sans-serif;
     color: #3d4261;
     padding: 3px 0;
@@ -564,14 +604,14 @@ table {
 
   .chart_p3{
     margin: 0;
-    font-size: 15px;
+    font-size: 1em;
     font-family: sans-serif;
     color: #808080;
     padding: 2px 0;
   }
 
   .days{
-    font-size: 12px;
+    font-size: 1em;
     font-family: sans-serif;
     color: grey;
   }
@@ -586,7 +626,7 @@ table {
 
 .box_span_footer{
     width: 100%;
-    height: 470px;
+    /* height: 470px; */
     border: 1px solid #dadada;
     background: #ffffff;
     padding: 35px 25px;
@@ -601,7 +641,8 @@ table {
 
 .first_div{
     display: flex;
-    padding: 20px 0 0 0px;
+    padding: 30px 0 0 0px;
+    border-bottom: 1px solid #aca8a8
 }
 
 .left_div{
@@ -659,30 +700,3 @@ table {
 
 
 /* MEDIA QUERY */
-
-@media screen and (min-width:300px) and (max-width:1000px) {
-    /* body{
-        background: #4438e4;
-    } */
-    .sub_div_two {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column !important;
-    }
-
-    .box_span_graph {
-        width: 100% !important;
-        height: 450px;
-        border: 1px solid #dadada;
-        background: #ffffff;
-        margin: 15px 0;
-    }
-
-    .box_span_chart {
-        width: 100%;
-        height: 410px;
-        border: 1px solid #dadada;
-        background: #ffffff;
-        margin: 15px 0;
-    }
-}
