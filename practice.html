@@ -2,6 +2,9 @@
 
 <head>
     <title> Liberty UI</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
 
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
 
@@ -10,12 +13,31 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script type="text/javascript">
+        function menuItem() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // // Close the dropdown if the user clicks outside of it
+        // window.onclick = function (event) {
+        //     if (!event.target.matches('.dropbtn')) {
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //             var openDropdown = dropdowns[i];
+        //             if (openDropdown.classList.contains('show')) {
+        //                 openDropdown.classList.remove('show');
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
 </head>
 
 <body>
-    <div align="center" class="main_div">
+    <div class="main_div">
         <div class="sub_div">
-            <span>
+            <span class="liberty_ui">
                 <span class="logo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 24 24">
                         <path
@@ -26,9 +48,89 @@
                     Liberty
                     <span class="logo_sub_name">UI</span>
                 </span>
+                <div class="dropdown">
+                    <div class="menu_icon_div" id="menu_click" onclick="menuItem()">
+                        <div class="menu_div"></div>
+                        <div class="menu_div"></div>
+                        <div class="menu_div"></div>
+                    </div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <!-- <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a> -->
+
+                        <span style="background-color: #4438e4; color: aliceblue" class="menu">
+                            <span class="menu_icon_span">
+                                <img src="monitor.png" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                DASHBOARD
+                            </span>
+                        </span>
+                        <span class="menu" onmouseover="this.style.background=' #402ebf';"
+                            onmouseout="this.style.background='#f2f2f2';">
+                            <span class="menu_icon_span">
+                                <img src="nevigator.svg" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                WIDGETS
+                            </span>
+                        </span>
+                        <span class="menu" onmouseover="this.style.background=' #402ebf';"
+                            onmouseout="this.style.background='#f2f2f2';">
+                            <span class="menu_icon_span">
+                                <img src="react.png" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                UI ELEMENTS
+                            </span>
+                            <span class="menu_icon_span_right">
+                                <img src="expand_arrow.svg" class="menu_icon_right" />
+                            </span>
+                        </span>
+                        <span class="menu" onmouseover="this.style.background=' #402ebf';"
+                            onmouseout="this.style.background='#f2f2f2';">
+                            <span class="menu_icon_span">
+                                <img src="flag.png" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                PAGES
+                            </span>
+                            <span class="menu_icon_span_right">
+                                <img src="expand_arrow.svg" class="menu_icon_right" />
+                            </span>
+                        </span>
+                        <span class="menu" onmouseover="this.style.background=' #402ebf';"
+                            onmouseout="this.style.background='#f2f2f2';">
+                            <span class="menu_icon_span_right">
+                                <img src="aicon.png" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                FORMS
+                            </span>
+                            <span class="menu_icon_span_right">
+                                <img src="expand_arrow.svg" class="menu_icon_right" />
+                            </span>
+                        </span>
+                        <span class="menu" onmouseover="this.style.background=' #402ebf';"
+                            onmouseout="this.style.background='#f2f2f2';">
+                            <span class="menu_icon_span_right">
+                                <img src="monitor.svg" class="menu_icon" />
+                            </span>
+                            <span class="menu_text">
+                                APPS
+                            </span>
+                            <span class="menu_icon_span_right">
+                                <img src="expand_arrow.svg" class="menu_icon_right" />
+                            </span>
+                        </span>
+
+
+                    </div>
+                </div>
             </span>
             <span class="search_main_span">
-                <span>
+                <span class="input_width">
                     <img src="search.svg" class="search_icon" />
                     <input type="text" class="search_input">
                     </input>
@@ -46,7 +148,7 @@
             </span>
         </div>
         <!-- HEADER SAECTION -->
-        <div class="menu_bar">
+        <div id="menu_bar_id" class="menu_bar">
             <span style="background-color: #4438e4; color: aliceblue" class="menu">
                 <span class="menu_icon_span">
                     <img src="monitor.png" class="menu_icon" />
@@ -55,8 +157,7 @@
                     DASHBOARD
                 </span>
             </span>
-            <span class="menu" onmouseover="this.style.background=' #402ebf';"
-                onmouseout="this.style.background='#f2f2f2';">
+            <span class="menu" >
                 <span class="menu_icon_span">
                     <img src="nevigator.svg" class="menu_icon" />
                 </span>
@@ -64,8 +165,7 @@
                     WIDGETS
                 </span>
             </span>
-            <span class="menu" onmouseover="this.style.background=' #402ebf';"
-                onmouseout="this.style.background='#f2f2f2';">
+            <span class="menu">
                 <span class="menu_icon_span">
                     <img src="react.png" class="menu_icon" />
                 </span>
@@ -76,8 +176,7 @@
                     <img src="expand_arrow.svg" class="menu_icon_right" />
                 </span>
             </span>
-            <span class="menu" onmouseover="this.style.background=' #402ebf';"
-                onmouseout="this.style.background='#f2f2f2';">
+            <span class="menu" >
                 <span class="menu_icon_span">
                     <img src="flag.png" class="menu_icon" />
                 </span>
@@ -88,8 +187,7 @@
                     <img src="expand_arrow.svg" class="menu_icon_right" />
                 </span>
             </span>
-            <span class="menu" onmouseover="this.style.background=' #402ebf';"
-                onmouseout="this.style.background='#f2f2f2';">
+            <span class="menu">
                 <span class="menu_icon_span_right">
                     <img src="aicon.png" class="menu_icon" />
                 </span>
@@ -100,8 +198,7 @@
                     <img src="expand_arrow.svg" class="menu_icon_right" />
                 </span>
             </span>
-            <span class="menu" onmouseover="this.style.background=' #402ebf';"
-                onmouseout="this.style.background='#f2f2f2';">
+            <span class="menu" >
                 <span class="menu_icon_span_right">
                     <img src="monitor.svg" class="menu_icon" />
                 </span>
@@ -115,7 +212,7 @@
         </div>
     </div>
     <!-- FIRST SECTION -->
-    <div id="flex_section">
+    <div class="flex_section">
         <div class="sub_div_two">
             <div class="sub_div_border">
                 <span class="box_span">
@@ -132,7 +229,7 @@
                     </span>
                 </span>
                 <span class="box_span">
-                    <span class="people_icon_span">
+                    <span class="people_icon_span" style="    padding: 0 10 0 10px;">
                         <img src="check.svg" class="people_icon" />
                     </span>
                     <span class="people_text">
@@ -174,7 +271,7 @@
         </div>
     </div>
     <!-- GRAPH SECTION -->
-    <div id="flex_section">
+    <div class="flex_section">
         <div class="sub_div_two">
             <div class="box_span_graph">
                 <div class="profile_div">
@@ -193,7 +290,7 @@
                             you can use the HTML entity.
                         </p>
                         <div class="follow_div">
-                        <input class="follow_button" type="button" value="Follow" />
+                            <input class="follow_button" type="button" value="Follow" />
                         </div>
                         <div class="graph_footer">
                             <div>
@@ -274,7 +371,7 @@
 
     <!-- TABLE SECTION -->
 
-    <div align="center">
+    <div class="flex_section">
         <div class="sub_div_two">
             <div class="sub_div_table">
                 <table>
@@ -400,10 +497,10 @@
 
     <!-- CHART SECTION -->
 
-    <div align="center">
+    <div class="flex_section">
         <div class="sub_div_two">
             <div class="box_span_chart">
-                <div align="left" class="chart_title">
+                <div class="chart_title">
                     <p class="footer_title">
                         The Current Chart
                     </p>
@@ -452,7 +549,7 @@
                         <p class="days">Sun</p>
                     </div>
                 </div>
-                <div align="left" class="project_status">
+                <div class="project_status">
                     <p class="product">
                         Project Status
                     </p>
@@ -462,8 +559,8 @@
                 </div>
             </div>
             <div class="box_span_chart">
-                <div align="left" class="chart_title">
-                    <p class="footer_title">
+                <div class="chart_title">
+                    <p class="footer_title" id="update_title">
                         Updates
                     </p>
                     <div class="circle_div">
@@ -488,11 +585,9 @@
                         </div>
                     </div>
 
-                    <div class="circle_bottom_div">
+                    <div class="circle_div">
                         <div>
-                            <div class="container_line_2">
-                            </div>
-                            <img src="circle.png" />
+                            <img src="circle.png" class="circle" />
                             <div class="container_line_1">
                             </div>
                         </div>
@@ -512,11 +607,9 @@
                         </div>
                     </div>
 
-                    <div class="circle_bottom_div">
+                    <div class="circle_div">
                         <div>
-                            <div class="container_line_2">
-                            </div>
-                            <img src="circle.png" />
+                            <img src="circle.png" class="circle" />
                             <div class="container_line_1">
                             </div>
                         </div>
@@ -542,9 +635,9 @@
 
     <!-- FOOTER SECTION -->
 
-    <div align="center">
+    <div class="flex_section">
         <div class="sub_div_footer">
-            <div class="box_span_footer" align="left">
+            <div class="box_span_footer">
                 <div>
                     <p class="footer_title">
                         Manage Tickets
@@ -572,7 +665,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="right_div" align="right">
+                    <div class="right_div">
                         <input class="follow_button" type="button" value="Manage" />
                     </div>
                 </div>
@@ -598,7 +691,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="right_div" align="right">
+                    <div class="right_div">
                         <input class="follow_button" type="button" value="Manage" />
                     </div>
                 </div>
@@ -624,7 +717,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="right_div" align="right">
+                    <div class="right_div">
                         <input class="follow_button" type="button" value="Manage" />
                     </div>
                 </div>

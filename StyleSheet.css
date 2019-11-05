@@ -1,6 +1,7 @@
 
 body{
     width:100% ;
+    min-width: 320px;
     margin: 0%;
     background: #f5fbff;
 }
@@ -10,6 +11,7 @@ body{
     background-color: #ffffff; 
     height: 145px; 
     box-shadow: 0 0 13px rgba(0,0,0,0.1);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,6 +47,7 @@ body{
 .search_main_span{
     display: flex; 
     justify-content:flex-end;
+    position: relative;
 }
 
 .search_icon{
@@ -78,10 +81,12 @@ body{
 .bell_span{
     background-color: #e41a1afa;
     border-radius: 50%;
-    width: 1.1%;
+    width: 3%;
     height: 16px;
-    position:absolute;
-    top:20px
+    position: absolute;
+    top: 1px;
+    left: 73%;
+    text-align: center;
 }
 
 .profile_picture{
@@ -116,6 +121,7 @@ body{
 
 .menu:hover{
     color: aliceblue;
+    background: #4438e4;
 }
 
 .menu_icon_span{
@@ -140,11 +146,12 @@ body{
 
 .menu_text{
     padding: 0 9px;
+    font-size: 0.8em;
 }
 
 /* FIRST SECTION */
 
-#flex_section{
+.flex_section{
     display: flex;
     justify-content: center;
 }
@@ -220,8 +227,9 @@ body{
 
 .profile_div{
     padding: 35px 25px 0 25px;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
 }
 
 .profile_div_product{
@@ -374,7 +382,7 @@ body{
 .graph_div_two{
     display: flex;
     justify-content: space-around;
-    padding: 15px 25px 0;
+    padding: 15px 25px 35px;
 }
 /* TABLE SECTION */
 table {
@@ -399,6 +407,8 @@ table {
     width: 100%;
     display: flex;
     border: 1px solid white;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .table_rows{
@@ -545,14 +555,8 @@ table {
 
   .container_line_1 {
     width: 3px;
-    height:50px;
-    background-color: rgb(239, 246, 255);
-    margin: 0 6px 0;
-  }
-
-  .container_line_2 {
-    width: 3px;
-    height:20px;
+    height: 58px;
+    position: absolute;
     background-color: rgb(239, 246, 255);
     margin: 0 6px 0;
   }
@@ -562,7 +566,8 @@ table {
   }
 
   .circle{
-    padding: 15px 0 0;
+    /* padding: 15px 0 0; */
+    margin: 16px 0 0px;
   }
 
   .circle_bottom{
@@ -571,11 +576,11 @@ table {
 
   .circle_div{
     display: flex;
-    padding: 15px 0 0;
+    /* padding: 15px 0 0; */
   }
 
-  .circle_bottom_div{
-    display: flex;
+  #update_title{
+    margin-bottom: 5%;
   }
 
   .watch_icon{
@@ -600,6 +605,14 @@ table {
     font-family: sans-serif;
     color: #3d4261;
     padding: 3px 0;
+  }
+
+  .chart_p2::after{
+    width: 3px;
+    height: 58px;
+    position: absolute;
+    background-color: rgb(239, 246, 255);
+    margin: 0 6px 0;
   }
 
   .chart_p3{
@@ -657,6 +670,7 @@ table {
 .right_div{
     width: 20%;
     padding: 0px 0;
+    text-align: center;
 }
 
 .james_span{
@@ -698,5 +712,715 @@ table {
     border-radius: 50%;
 }
 
+/* Menu card onclick */
 
-/* MEDIA QUERY */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  
+
+/* MEDIA QUERY 425PX*/
+
+@media screen and (max-width: 425px) {
+
+    .menu_div {
+         width: 25px;
+         height: 4px;
+         background-color: black;
+         margin: 3px 0;
+     }
+ 
+     .menu_icon_div {
+         padding: 25px 0 0px 0;
+     }
+ 
+     .main_div {
+         height: auto;
+     }
+ 
+     .liberty_ui {
+         width: 50%;
+         padding: 10px 0 0 0;
+     }
+ 
+     .logo_name {
+         font-size: 1.4em;
+         padding: 10px 20px 0 10px;
+     }
+ 
+     .menu_text {
+         font-size: 0.9em !important;
+     }
+ 
+     .search_main_span{
+         width: 38% !important;
+         flex-flow: wrap-reverse;
+         padding: 5px 0;
+     }
+ 
+     .search_icon {
+         width: 40px;
+         height: 45px;
+         position: absolute;
+         padding: 16px 3px;
+         bottom: -3px;
+         left: -5px;
+     }
+ 
+     .search_input {
+         width: 100%;
+         padding: 12px 20px;
+         height: 30px;
+         margin: 0;
+         display: inline-block;
+         background-color: #f2f2f2;
+         border: 0px solid rgb(182, 180, 180);
+         border-radius: 20px;
+         box-sizing: border-box;
+     }
+ 
+     .bell_main_span {
+         padding: 11px;
+     }
+ 
+     .bell_icon {
+         width: 17px;
+         height: 17px;
+     }
+ 
+     .bell_span {
+         background-color: #e41a1afa;
+         border-radius: 50%;
+         width: 6%;
+         height: 17px;
+         position: relative;
+         left: -8px;
+         top: -12px;
+         text-align: center;
+     }
+ 
+     .profile_picture {
+         border-radius: 50%;
+         height: 35px;
+         margin: 0 0 10px;
+     }
+ 
+     .menu_bar {
+         display: none;
+     }
+
+/* fsddddddddddddddddddf */
+
+     .menu_bar {
+        width: 90%;
+        height: auto !important;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        background-color: #f2f2f2;
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 6px 14px;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #menu_bar_id {
+        color: aliceblue;
+        width: 12px;
+        height: 12px;
+    }
+
+ /* sdffffffffffffffffffffffffff */
+     .box_span {
+         width: 25%;
+         border-right: 1px solid #dadada;
+         background: #ffffff;
+         display: flex;
+         justify-content: center;
+         padding: 17px 0px;
+         flex-direction: column;
+     }
+ 
+     .box_span_last {
+         padding: 17px 0px;
+         display: flex;
+         justify-content: center;
+         padding: 17px 0px;
+         flex-direction: column;
+     }
+ 
+     .sub_div_two {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column !important;
+     }
+ 
+     .box_span_graph {
+         width: 100% !important;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .box_span_chart {
+         width: 100%;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .container_line_1{
+         height: 64px!important;
+     }
+ 
+     .people_icon{
+         width: 15px !important;
+         height: 25px !important;
+      }
+     
+      .people_icon_span{
+         padding: 0px 2px 0px 0px !important;
+         align-self: center;
+      }
+ 
+      .people_text{
+          padding: 0px !important;
+          align-self: center;
+      }
+      .people_title{
+         font-size: 0.7em !important;
+         text-align: center;
+      } 
+      .people_count{
+          font-size: 0.9em;
+          text-align: center;
+      }
+ 
+      .left_div {
+         width: 25%;
+         padding: 0 0 0 0px;
+     }
+ 
+     .middle_div {
+         width: 53%;
+     }
+ 
+     .product {
+         font-size: 0.8em !important;
+     }
+ 
+     .james_span {
+         font-size: 14px !important;
+     }
+ 
+     .james_span_1 {
+         font-size: 13px !important;
+     }
+ 
+     .description {
+         font-size: 13px !important;
+     }
+ 
+     .last_footer_div {
+         font-size: 12px;
+     }
+ 
+     .respond_span {
+         padding: 0 110px 0 0px;
+     }
+ 
+     .due_span{
+         padding: 0;
+     }
+ 
+     .follow_button {
+         padding: 5px 8px;
+         font-size: 13px;
+     }
+ 
+     .product_price {
+         font-size: 2em;
+     }
+ 
+     .days {
+         font-size: 0.8em;
+     }
+ 
+     .chart_p1 {
+         font-size: 1em;
+     }
+ 
+     .chart_p2 {
+         font-size: 0.8em;
+     }
+ 
+     .chart_p3 {
+         font-size: 0.8em;
+     }
+ 
+     .sub_div_table{
+         overflow-x: auto;
+         overflow-y: hidden;
+     }
+ 
+     .graph_div_two {
+         padding: 15px 25px 15px;
+     }
+ 
+     .graph_footer {
+         padding: 30px 0 15px;
+     }
+ 
+     .name_header{
+         font-size: 1.1em;
+     }
+ 
+     .paragraph{
+         font-size: 0.8em;
+     }
+ 
+     .product {
+         margin: 0;
+         font-size: 1em;
+         font-family: sans-serif;
+         color: #6d655b;
+         padding: 0 0 5px 0;
+     }
+ 
+     .right_div {
+         width: 20%;
+         padding: 0px 0px;
+         text-align: center;
+     }
+ } 
+ 
+ 
+ /* MEDIA QUERY 549PX and 424PX*/
+ 
+ @media only screen and (max-width: 549px) and (min-width: 426px) {
+ 
+ 
+    .menu_div {
+         width: 25px;
+         height: 4px;
+         background-color: black;
+         margin: 3px 0;
+     }
+ 
+ 
+     .menu_icon_div {
+         padding: 30px 0 0px 0;
+     }
+ 
+     .main_div {
+         height: auto;
+     }
+ 
+     .liberty_ui {
+         width: 50%;
+         /* padding: 0 0 10px 0; */
+     }
+ 
+     .logo_name {
+         font-size: 1.4em;
+         padding: 0 88px 0 10px;
+     }
+ 
+     .menu_text {
+         font-size: 0.9em !important;
+     }
+ 
+     .search_main_span{
+         width: 38% !important;
+         flex-flow: wrap-reverse;
+         padding: 5px 0;
+     }
+ 
+     .sub_div {
+         width: 90%;
+         padding: 3% 0;
+         display: flex;
+         justify-content: space-between;
+     }
+ 
+     .search_icon {
+         width: 40px;
+         height: 45px;
+         position: absolute;
+         padding: 16px 3px;
+         bottom: -4px;
+         left: -5px;
+     }
+ 
+     .search_input {
+         width: 100%;
+         padding: 12px 20px;
+         height: 30px;
+         margin: 0;
+         display: inline-block;
+         background-color: #f2f2f2;
+         border: 0px solid rgb(182, 180, 180);
+         border-radius: 20px;
+         box-sizing: border-box;
+     }
+ 
+     .bell_main_span {
+         padding: 11px;
+     }
+ 
+     .bell_icon {
+         width: 17px;
+         height: 17px;
+     }
+ 
+     .bell_span {
+         background-color: #e41a1afa;
+         border-radius: 50%;
+         width: 6%;
+         height: 17px;
+         position: relative;
+         left: -8px;
+         top: -15px;
+         text-align: center;
+     }
+ 
+     .profile_picture {
+         border-radius: 50%;
+         height: 35px;
+         margin: 0 0 10px;
+     }
+ 
+     #menu_bar_id {
+         display: none;
+     }
+
+     .menu_bar {
+        width: 90%;
+        height: auto !important;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        background-color: #f2f2f2;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 6px 14px;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menu_icon {
+        color: aliceblue;
+        width: 12px;
+        height: 12px;
+    }
+
+ 
+     .box_span {
+         width: 25%;
+         border-right: 1px solid #dadada;
+         background: #ffffff;
+         display: flex;
+         justify-content: center;
+         padding: 17px 0px;
+         flex-direction: column;
+     }
+ 
+     .box_span_last {
+         padding: 17px 0px;
+         display: flex;
+         justify-content: center;
+         padding: 17px 0px;
+         flex-direction: column;
+     }
+ 
+     .sub_div_two {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column !important;
+     }
+ 
+     .box_span_graph {
+         width: 100% !important;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .box_span_chart {
+         width: 100%;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .container_line_1{
+         height: 48px!important;
+     }
+ 
+     .people_icon{
+         width: 15px !important;
+         height: 25px !important;
+      }
+     
+      .people_icon_span{
+         padding: 0px 2px 0px 0px !important;
+         align-self: center;
+      }
+ 
+      .people_text{
+          padding: 0px !important;
+          align-self: center;
+      }
+      .people_title{
+         font-size: 0.7em !important;
+         text-align: center;
+      } 
+      .people_count{
+          font-size: 0.9em;
+          text-align: center;
+      }
+ 
+      .left_div {
+         width: 20%;
+         padding: 0 0 0 0px;
+     }
+ 
+     .middle_div {
+         width: 55%;
+     }
+ 
+     .right_div {
+         width: 25%;
+         padding: 0px 0;
+         text-align: center;
+     }
+ 
+     .product {
+         font-size: 0.8em !important;
+     }
+ 
+     .james_span {
+         font-size: 14px !important;
+     }
+ 
+     .james_span_1 {
+         font-size: 13px !important;
+     }
+ 
+     .description {
+         font-size: 13px !important;
+     }
+ 
+     .last_footer_div {
+         font-size: 11px;
+     }
+ 
+     .respond_span {
+         padding: 0 120px 0 0px;
+     }
+ 
+     .due_span{
+         padding: 0;
+     }
+ 
+     .follow_button {
+         padding: 5px 8px;
+         font-size: 13px;
+     }
+ 
+     .product_price {
+         font-size: 2em;
+     }
+ 
+     .days {
+         font-size: 0.8em;
+     }
+ 
+     .chart_p1 {
+         font-size: 1em;
+     }
+ 
+     .chart_p2 {
+         font-size: 0.8em;
+     }
+ 
+     .chart_p3 {
+         font-size: 0.8em;
+     }
+ 
+     .sub_div_table{
+         overflow-x: auto;
+         overflow-y: hidden;
+     }
+ 
+     .graph_div_two {
+         padding: 15px 25px 15px;
+     }
+ 
+     .graph_footer {
+         padding: 30px 0 15px;
+     }
+ 
+     .name_header{
+         font-size: 1.1em;
+     }
+ 
+     .paragraph{
+         font-size: 0.8em;
+     }
+ 
+     .product {
+         margin: 0;
+         font-size: 1em;
+         font-family: sans-serif;
+         color: #6d655b;
+         padding: 0 0 5px 0;
+     }
+ } 
+ 
+ /* MEDIA QUERY 768PX AND 550PX */
+ @media only screen and (max-width: 768px) and (min-width:550px){
+ 
+     .menu {
+         width: 18%;
+         padding: 15px 0;
+         font-size: 0.8em;
+         font-family: sans-serif;
+         display: flex;
+         justify-content: center;
+     }
+ 
+     .input_width {
+         width: 50%;
+     }
+     .menu_text {
+         padding: 0 4px;
+         font-size: 0.8em;
+     }
+ 
+     .menu_icon_span {
+         padding: 0px 0px 0 7px;
+     }
+ 
+     .menu_icon {
+         color: aliceblue;
+         width: 11px;
+         height: 11px;
+     }    
+ 
+     .people_icon_span {
+         padding: 0px 10px 0px 0px;
+     }
+ 
+     .people_icon {
+         width: 22px;
+         height: 55px;
+     }
+ 
+     .people_title {
+         font-size: 0.8em;
+     }
+ 
+     .people_count {
+         font-size: 1.3em;
+     }
+ 
+     .people_text {
+         padding: 5px 0 0px 0;
+     }
+ 
+     .menu_icon_span_right {
+         padding: 0px 0px;
+     }
+ 
+     .sub_div_two {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column !important;
+     }
+ 
+     .box_span_graph {
+         width: 100% !important;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .box_span_chart {
+         width: 100%;
+         border: 1px solid #dadada;
+         background: #ffffff;
+         margin: 15px 0;
+     }
+ 
+     .product_price {
+         font-size: 2.1em;
+     }
+ 
+     .left_div {
+         width: 17%;
+         padding: 0 0 0 0px;
+     }
+ 
+     .due_span {
+         padding: 0 0px 0 0px;
+     }
+ 
+     .product {
+         margin: 0;
+         font-size: 1em;
+         font-family: sans-serif;
+         color: #6d655b;
+         padding: 0 0 5px 0;
+     }
+ 
+     .respond_span{
+         padding: 0 120px 0 0;
+     }
+ }
+ 

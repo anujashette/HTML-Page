@@ -1,10 +1,36 @@
 
 window.onload = function () {
+    let line_chart = '260';
+    let spline_chart = '250' ;
+    if(screen.availWidth <= 980){
+        console.log("width",screen.availWidth);
+        line_chart = '210';
+        spline_chart = '210';
+    }
+
+    if(screen.availWidth <= 850){
+        console.log("width",screen.availWidth);
+        line_chart = '170';
+        spline_chart = '170';
+    }
+
+    if(screen.availWidth <= 768){
+        console.log("width",screen.availWidth);
+        line_chart = '350';
+        spline_chart = '250';
+    }
+
+    if(screen.availWidth <= 380){
+        console.log("width",screen.availWidth);
+        line_chart = '280';
+        spline_chart = '250';
+    }
+
     var chart = Highcharts.chart('container_spline', {
         chart: {
             type: 'areaspline',
             height: '180',
-            width: '250'
+            width: spline_chart
         },
         title: {
             text: ''
@@ -61,7 +87,7 @@ window.onload = function () {
     var lineChart = Highcharts.chart('container', {
         chart: {
             height:'220',
-            width:'260'
+            width:line_chart
         },
         title: {
             text: ''
